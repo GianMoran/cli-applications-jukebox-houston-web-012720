@@ -30,6 +30,7 @@ def exit_jukebox
 end
 
 def run(songs)
+<<<<<<< HEAD
   while true do 
     puts "Please enter a command:"
     user_input = gets.strip
@@ -50,4 +51,27 @@ def run(songs)
       end
   end
 
+=======
+  puts "Please enter a command:"
+  user_input = gets.strip
+  if user_input == "exit"
+    exit_jukebox
+  else
+    binding.pry
+    while user_input != "exit" do 
+      case user_input
+        when "list"
+          list(songs)
+        when "play"
+          play(songs)
+        when "help"
+          help
+        when "exit"
+          exit_jukebox
+          break
+        end
+    
+    end
+#end
+>>>>>>> 83ee9e1a1bc0da96471cbcac1e9079d8a2daccfb
 end
